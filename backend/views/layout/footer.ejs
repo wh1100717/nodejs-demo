@@ -1,0 +1,34 @@
+        <div class="spacer"></div>
+        <div style='padding-bottom: 100px;'></div>
+        <footer>
+            <div class="copyright">
+                Copyright © 2013&nbsp;Poly Spider 
+            </div>
+            <ul class="footer-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </footer>
+        <script src="/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/javascripts/json2.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                naviCheck();
+            });
+            function naviCheck() {
+                var url = location.href;
+                if (url.indexOf("/status") >= 0) {
+                    $("#naviStatus").addClass("active");
+                } else if (url.indexOf("/chart") >= 0) {
+                    $("#naviChart").addClass("active");
+                } else if (url.indexOf("/data") >= 0) {
+                    $("#naviData").addClass("active");
+                } else if (url.indexOf("/log") >= 0) {
+                    $("#naviLog").addClass("active");
+                } else {
+                    $("#naviHome").addClass("active");
+                }
+            }
+        </script>
+    </body>
+</html>
